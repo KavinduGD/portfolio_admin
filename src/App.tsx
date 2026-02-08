@@ -1,35 +1,49 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
+      {/* create a still construction block */}
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <div className="construction-container">
+          <div className="construction-content">
+            <h1>🚧 Under Construction</h1>
+            <p>This site is still in development.</p>
+            <p>We'll be back soon with something amazing!</p>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <style>{`
+    .construction-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      font-family: 'Arial', sans-serif;
+    }
+    .construction-content {
+      text-align: center;
+      background: white;
+      padding: 60px 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+    }
+    .construction-content h1 {
+      font-size: 48px;
+      margin: 0 0 20px 0;
+      color: #333;
+    }
+    .construction-content p {
+      font-size: 18px;
+      color: #666;
+      margin: 10px 0;
+      line-height: 1.6;
+    }
+  `}</style>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
